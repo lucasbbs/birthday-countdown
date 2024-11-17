@@ -1,7 +1,16 @@
+let christmasDate;
+let timerID;
+let isPlaying = false;
+const birthday = document.querySelector('#birthday')
+birthday.addEventListener('change', () => {
+    christmasDate = new Date(birthday.value)
+    christmasCountdown()
+    timerID = setInterval(christmasCountdown, 1000);
+})
+
 function christmasCountdown() {
-    const christmasDate = new Date(new Date().getFullYear(), 11, 25);
     const now = new Date();
-    const diff = christmasDate - now;
+    const diff = (christmasDate || 0) - now;
 
     const msInSecond = 1000; //сколько миллисекунд в секунде - 1,000
     const msInMinute = 60 * 1000; // сколько миллисекунд в минуте - 60,000 
@@ -26,17 +35,18 @@ function christmasCountdown() {
         document.querySelector(".minutes").textContent = 0;
         document.querySelector(".seconds").textContent = 0;
         clearInterval(timerID);
-        merryChristmas();
     }
-
 }
 
-let timerID = setInterval(christmasCountdown, 1000);
-
-function merryChristmas() {
-    const heading = document.querySelector("h1");
-    heading.textContent = "MERRY CHRISTMAS!!! HO-HO-HO!";
-    heading.classList.add("red");
+function handleIconPlayButton(isPlaying) {
+    const playButton = document.querySelector('#icon-button')
+    if (isPlaying) {
+        playButton.classList.remove('fa-play')
+        playButton.classList.add('fa-stop')
+    } else {
+        playButton.classList.remove('fa-stop')
+        playButton.classList.add('fa-play')
+    }
 }
 
 
@@ -50,7 +60,16 @@ button.addEventListener("click", function () {
     let currentTrack = 0;
 
     audioPlayer.src = tracks[currentTrack];
-    audioPlayer.play();
+
+    if (isPlaying) {
+        audioPlayer.pause();
+        isPlaying = false
+    } else {
+        audioPlayer.play();
+        isPlaying = true
+    }
+
+    handleIconPlayButton(isPlaying)
 
     audioPlayer.addEventListener('ended', () => {
         currentTrack++;

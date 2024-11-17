@@ -1,8 +1,8 @@
 body {
-    background-image: url("https://images.unsplash.com/photo-1603793303277-ed67787545e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2FudGF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
+    background-image: url("https://images.unsplash.com/photo-1509805735646-2f72b3272a7d?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: red;
+    background-color: black;
 }
 
 .heading {
@@ -15,7 +15,7 @@ h1 {
     background-color: rgba(251, 248, 249, 0.9);
     padding: 20px;
     border: 3px solid black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: monospace, sans-serif;
 }
 
 
@@ -40,7 +40,7 @@ h1 {
 }
 
 h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: monospace, sans-serif;
     font-size: 30px;
 }
 
@@ -48,19 +48,42 @@ h3 {
 .hours,
 .minutes,
 .seconds {
-    font-family: 'Montserrat', sans-serif;
+    font-family: monospace, sans-serif;
     font-size: 40px;
 }
 
-.red {
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.light-coral {
+    color: lightcoral;
+}
+
+.align-vertically {
+    align-content: center;
+}
+
+.play-button {
+    font-size: 4rem;
+    background-color: transparent;
+}
+
+.heading-text {
     font-size: 60px;
     border: none;
-    font-family: 'Staatliches', cursive;
-    color: red;
+    font-family: monospace, cursive;
+    background-color: transparent;
+}
+
+.date-input {
+    padding: 1rem;
+    font-size: 20px;
 }
 
 button {
-    margin-left: 100px;
     border: none;
 }
 
@@ -74,5 +97,9 @@ button {
 @media all and (max-width: 500px) {
     h1 {
         font-size: 30px;
+    }
+    .row {
+        flex-direction: column;
+        align-items: center;
     }
 }

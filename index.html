@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap" rel="stylesheet">
 </head>
 
@@ -20,40 +23,45 @@
     <audio id="myAudio"></audio>
 
     <div class="heading">
-        <h1 class="red">MERRY CHRISTMAS!!! HO-HO-HO!</h1>
+        <h1 class="heading-text light-coral">Countdown to Your Birthday!</h1>
     </div>
-
-    <button id="myButton"><img src="https://img.icons8.com/wired/2x/play.png" alt="Play Button"></button>
-
+    <div class="row">
+        <button id="myButton" class="play-button light-coral">
+            <i id="icon-button" class="fa-solid fa-play"></i>
+        </button>
+        <div class="align-vertically">
+            <input class="date-input light-coral" type="date" id="birthday"></input>
+        </div>
+    </div>
 
     <div class="container">
 
         <div class="christmas">
             <div class="block">
-                <h4 class="days">0</h4>
-                <h3>DAYS</h3>
+                <h4 class="days light-coral">0</h4>
+                <h3 class="light-coral">DAYS</h3>
             </div>
         </div>
 
         <div class="christmas">
             <div class="block">
-                <h4 class="hours">0</h4>
-                <h3>HOURS</h3>
+                <h4 class="hours light-coral">0</h4>
+                <h3 class="light-coral">HOURS</h3>
             </div>
         </div>
 
 
         <div class="christmas">
             <div class="block">
-                <h4 class="minutes">0</h4>
-                <h3>MINUTES</h3>
+                <h4 class="minutes light-coral">0</h4>
+                <h3 class="light-coral">MINUTES</h3>
             </div>
         </div>
 
         <div class="christmas">
             <div class="block">
-                <h4 class="seconds">0</h4>
-                <h3>SECONDS</h3>
+                <h4 class="seconds light-coral">0</h4>
+                <h3 class="light-coral">SECONDS</h3>
             </div>
         </div>
     </div>
